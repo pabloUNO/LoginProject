@@ -6,8 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
 
-public class MainLogIn extends JFrame {
+public class frmExecute extends JFrame {
 
 	private JPanel contentPane;
 
@@ -18,7 +19,7 @@ public class MainLogIn extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MainLogIn frame = new MainLogIn();
+					frmExecute frame = new frmExecute();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -30,13 +31,17 @@ public class MainLogIn extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MainLogIn() {
+	public frmExecute() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("WELCOME USER!!!");
+		lblNewLabel.setBounds(113, 11, 154, 57);
+		contentPane.add(lblNewLabel);
 	}
 
 }
